@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="link rel="preconnect href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="link rel="stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Contactenos | sportsls</title>
+</head>
+<body>
+    <div>
+        <h1>Contacténos</h1>
+    </div>
+    <p>Contáctenos sobre cualquier cosa relacionada con nuestra empresa o servicio. Haremos todo lo posibles por responder a la brevedad.</p>
+   <div class="container_button">
+    <h2>Preguntas frecuentes</h2>
+    <hr>
+    
+    <button type="button" class="button_pre">¿Comó solicitar un reembolos?</button>
+    <p>Para solicitar un reembolso, sigue estos pasos:</p>
+    <ol>Inicia sesión en tu cuenta en nuestro sitio web.</ol>
+    <ol>Ve a la sección "Contacténos"</ol>
+    <ol>Selecciona  "Crear Solicitud" ingrese los datos requeridos.</ol>
+    <ol>En categoria selecciona "solicitar reembolso" , describa el asunto y descripcion</ol>
+    <ol>Adjunte el pago relacionado con la compra a reembolsar.</ol>
+    <ol>De clic en " Enviar "</ol>
+
+    <button type="button" class="button_pre">Una vez hecha la compra. ¿Puedo cancelar mi pedido?</button>
+    <p>No, una vez que la compra ha sido realizada, no es posible cancelar el pedido. Si ya no deseas el producto, deberás esperar a recibirlo y luego proceder con una solicitud de devolución y reembolso según nuestras políticas de devoluciones. Consulta nuestra política de devoluciones para más detalles sobre cómo proceder en estos casos.</p>
+    
+    <button type="button" class="button_pre">¿Comó me registro?</button>
+    <p>Registrarse en nuestra tienda deportiva es muy sencillo:</p>
+    <ol>Haz clic en el botón "Registrarse" en la esquina superior derecha de la página de inicio.</ol>
+    <ol>Completa el formulario de registro con tu nombre, correo electrónico y una contraseña segura.</ol>
+    <ol>Haz clic en "Registrarme".</ol>
+    <ol>Recibirás un correo electrónico de confirmación. Haz clic en el enlace proporcionado en el correo para activar tu cuenta.</ol>
+
+    <button type="button" class="button_pre">Comó puedo solicitar una peticion?</button>
+    <p>Para realizar una petición, sigue estos pasos:</p>
+    <ol>Inicia sesión en tu cuenta en nuestro sitio web.</ol>
+    <ol>Ve a la sección "Contacténos"</ol>
+    <ol>Selecciona  "Crear Solicitud" ingrese los datos requeridos.</ol>
+    <ol>En categoria selecciona "petición", describa el asunto y descripcion.</ol>
+    <ol>De clic en " Enviar"</ol>
+    <div class="direccion">
+        <i class="fas fa-map-marker-alt"></i>
+        <a>Calle 134 53 - 23 Bogotá Colombia</a>
+        </div>
+        <div class="correo">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:info@example.com">info@example.com</a>
+        </div>
+        <div class="telefono">
+        <i class="fas fa-phone"></i>
+        <a href="tel:+1234567890">+57 316 234 23 12</a>
+        </div>
+   </div>
+    <div>
+    <button class="button_solicitud">Crear Solicitud</button>
+    </div>
+    <h2>Formulario de Solicitud</h2>
+    <form id="form" class="form">
+        <label for="nombre">Nombres Completos:</label>
+        <input type="text" id="nombre" >
+
+        <label for="telefono">Número de Celular:</label>
+        <input type="number" id="celphone" >
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" >
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" >
+
+        <label for="categoria">Categoría:</label>
+        <select id="categoria" >
+            <option value="">Selecciona una opción</option>
+            <option value="solicitud_de_rembolso">Solicitud de reembolso</option>
+            <option value="peticiones">Peticiones</option>
+            <option value="queja">Queja</option>
+            <option value="subgerencia">Subgerencia</option>
+            <option value="reclamo">Reclamo</option>
+        </select>
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" >
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+        <label for="adjunto">Adjuntar archivo:</label>
+        <input type="file" id="adjunto" name="adjunto">
+        <label>
+            <input type="checkbox" id="politicas" name="politicas" required>
+            Acepto las <a href="politicas_privacidad.html" target="_blank">Políticas y Privacidad</a>
+        </label> <button type="submit">Enviar</button>
+    </form>    
+    <img src="/img/contacimg1.jpg" alt="imagen">
+    
+</body>
+</html>

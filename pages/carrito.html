@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="link rel="stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Carrito de compras | sportsls</title>
+</head>
+<body>
+    <div class="carrito">
+        <h1>Carrito de Compras</h1>
+        
+        <!-- Productos comprados -->
+        <div class="productos">
+            <div class="producto1">
+                <img src="/img/tiendaimg1.jpg" alt=" ">
+                <div class="product-details">
+                    <p>Camiseta de tirantes de atletismo para mujer</p>
+                    <p>$ 80.000</p>
+                </div>
+            </div>
+            <div class="producto2">
+                <img src="/img/tiendaimg2.jpg" alt=" ">
+                <div class="product-details">
+                    <p>Falda y camiseta de tirantes de atletismo</p>
+                    <p>$ 120.000</p>
+                </div>
+            </div>
+            
+          
+        <div class="totales">
+            <p>Total de Productos: 2</p>
+            <p>Valor Total: $200.000</p>
+        </div>
+
+        <!-- Formulario de Método de Pago -->
+        <div class="metodo-pago">
+            <h2>Método de Pago</h2>
+            <form action="procesar_pago.php" method="POST">
+                <label for="nombre">Nombre de quien recibe:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="cedula">Número de Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required>
+
+                <label for="direccion">Dirección de Entrega:</label>
+                <input type="text" id="direccion" name="direccion" required>
+
+                <label for="celular">Número de Celular:</label>
+                <input type="tel" id="celular" name="celular" required>
+
+                <label for="metodo_pago">Método de Pago:</label>
+                <select id="metodo_pago" name="metodo_pago" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="pse">PSE</option>
+                    <option value="bancolombia">Bancolombia</option>
+                    <option value="nequi">Nequi</option>
+                    <option value="visa">Visa</option>
+                    <option value="daviplata">Daviplata</option>
+                </select>
+
+                <button type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
