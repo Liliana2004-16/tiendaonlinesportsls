@@ -1,0 +1,325 @@
+/*
+Paletas de colores 
+#8C52FF
+#075C6B
+#341150
+white
+#BAB5AF
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  position: relative;
+  top: 0;
+  font-size: 16px;
+}
+/*PAGINA PRINCIPAL*/
+.header {
+  position:sticky;
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
+.header .container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .logo{
+  text-align: center;
+  padding: 0.5%;
+  flex-grow: 1;
+}
+.logo  img{
+  width: 150px;
+  margin: auto;
+}
+.header .menu{
+  text-align: center;
+  padding: 0.8%;
+  flex-grow: 8;
+
+}
+.menu1>li{
+  display: inline-block;
+  padding: 0% 02%;
+  list-style: none;
+  font-size: 20px;  
+}
+.menu1>li a{
+  color: black;
+  text-decoration: none;
+}
+.header .boton1{
+  text-align:center;
+  padding: 0.5%;
+  flex-grow: 1;
+  margin-left: 15%;
+}
+.menu1 .boton1{
+
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    color:white;
+    cursor: pointer;
+    border-radius: 25px;
+    background-color: #075C6B;
+}
+  
+
+.promocion{
+  background-color:#8C52FF ;
+  color: white;
+  display: flex;  
+}
+
+.imagenp1{
+  width: 600px;
+  height: 700px;
+  flex: 1;
+  display: block;
+}
+.coleccion{
+  flex: 1;
+  text-align: right;
+  padding: 6% 7% ;
+}
+.coleccion>h1{
+  font-size: 60px;
+  font-family: Arial, Helvetica, sans-serif;/*cambiar letra al h1 pagina principal*/
+}
+.descubrelo{
+  padding: 20px 70px;
+  font-size: 20px;
+  border: none;
+  color:black;
+  cursor: pointer;
+  border-radius: 25px;
+  background-color:white; 
+}
+
+/* styles.css */
+
+
+.referencias {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual tamaño */
+  grid-template-rows: repeat(2, 1fr); /* Dos filas de igual tamaño */
+}
+
+.imagenprin {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que cubra todo el área del contenedor */
+}
+
+/* Configuración específica para el diseño */
+.referencias img:nth-child(1) {
+  grid-column: 1 / 2; /* Primera columna */
+  grid-row: 1 / 2; /* Primera fila */
+}
+
+.referencias img:nth-child(2) {
+  grid-column: 2 / 3; /* Segunda columna */
+  grid-row: 1 / 2; /* Primera fila */
+}
+
+.referencias img:nth-child(3) {
+  grid-column: 1 / 2; /* Primera columna */
+  grid-row: 2 / 3; /* Segunda fila */
+}
+
+.referencias img:nth-child(4) {
+  grid-column: 2 / 3; /* Segunda columna */
+  grid-row: 2 / 3; /* Segunda fila */
+}
+
+.referencias img:nth-child(5) {
+  grid-column: 3 / 4; /* Tercera columna */
+  grid-row: 1 / 3; /* De la primera a la segunda fila */
+}
+
+.referencias img:nth-child(6) {
+  grid-column: 3 / 4; /* Tercera columna */
+  grid-row: 2 / 3; /* Segunda fila */
+}
+
+
+.paratodos{
+  display: flex;
+  width: 100%;
+  color: white;
+  height: auto;
+  justify-content: space-between;
+  font-size: 18px;
+
+}
+.paratodos button{
+    padding: 18px 40px;
+    font-size: 16px;
+    border: none;
+    color:black;
+    cursor: pointer;
+    border-radius: 25px;
+    background-color:white;
+    margin-top: 20px;
+}
+.paratodos h2{
+  font-size: 30px;
+  margin-top: 20px;
+  padding: 2% ;
+}
+.paratodos p{
+  padding: 2%;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+.paraella{
+  background-color:#075C6B ;
+  text-align: center;
+  padding: 5% 5%;
+  flex: 1;  
+}
+.icon-estrella{
+  font-size: 30px;
+  margin-top: 5px;
+}
+
+.parael{
+  background-color: #8C52FF;
+  text-align: center;
+  flex: 1;
+  padding: 5% 5%;
+
+}
+.accesorios{
+  background-color: #341150;
+  text-align: center;
+  padding: 5% 5%;
+  flex: 1;
+}
+.marcas{
+  display: flex;
+  margin-top: 30px;
+  margin-left: 55px;
+  margin-right: 5px;
+  margin-bottom: 30px;
+
+}
+.marcas img{
+  flex-grow: 1;
+  height: 85px;
+  width: 20px;
+  margin-right: 60px;
+
+}
+.pie{
+  background-color: #075C6B;
+  text-align: left;
+  color: white;
+  font-size: 18px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+
+}
+.pie .informacion{
+ display: flex;
+ flex: 1;
+}
+.pie-info{
+  color: white;
+  list-style: none;
+  text-align: left;
+  flex: 1;
+}
+.pie-info a{
+  color: white;
+  text-decoration: none;
+}
+.info{
+  flex: 1;
+}
+.info-contacto{
+  display: flex;  
+}
+.info-contacto i{
+  color: black;
+}
+.redesSociales{
+  font-size: 50px;
+}
+.redesSociales a{
+  color: black;
+  text-decoration: none;
+}
+.derechos{
+  text-align: center;
+  margin-top: 30px;
+}
+/*PAGINA TIENDA*/
+.productosTienda{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 50px;
+  text-align: center;
+
+}
+.maintienda img{
+  width: 300px;
+  height: 400px;
+
+}
+.productosTienda button{
+  padding: 15px 35px;
+  font-size: 16px;
+  border: none;
+  color:white;
+  border-radius: 10px;
+  background-color:#8C52FF;
+  margin-top: 20px;
+}
+.product-details p{
+  font-size: 18px;
+}
+.precios{
+
+}
+.buscador{
+  width: 10px 10px;
+  text-align: center;
+}
+.buscador input{
+  padding: 10px 10px ;
+  width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
