@@ -31,7 +31,7 @@
                 <li><a href="./sobreNosotros.html">Sobre Nosotros</a></li>
                 <li><a href="./contactenos.html">Contactenos</a></li>
                 <li><a href="./carrito.html"class="fa-solid fa-cart-shopping"></a></li>
-                <li><a href="#Contáctanos"class="fa-solid fa-phone"></a></li>
+                <li><a href="./contactenos.html" class="fa-solid fa-phone"></a></li>
                 <button class="boton1"onclick="window.location.href='./registrarme.html'">Registrarme</button>           
             </nav>                  
             </div>
@@ -39,60 +39,94 @@
                 
     </header> 
 
-    <main> 
-        <div class="carrito">
-            <h1>Carrito de Compras</h1>
-        <!-- Productos comprados -->
-            <div class="productos">
-                <div class="producto1">
-                    <img src="/img/tiendaimg1.jpg" alt=" ">
-                    <div class="product-details">
-                        <p>Camiseta de tirantes de atletismo para mujer</p>
-                        <p>$ 80.000</p>
-                    </div>
-                </div>
-                <div class="producto2">
-                <img src="/img/tiendaimg2.jpg" alt=" ">
-                <div class="product-details">
-                    <p>Falda y camiseta de tirantes de atletismo</p>
-                    <p>$ 120.000</p>
-                </div>
-                </div>
+    <main class="main-carrito">
+        <section class="productos-carrito">
+            <div class="compra" id="cartItems">
+                <p class="carritoVacio">Carrito Vacio</p>                     
+            </div>
+
             <div class="totales">
-                <p>Total de Productos: 2</p>
-                <p>Valor Total: $200.000</p>
+                <p>Valor Total: $<span id="totalCompra">0</span></p>
+                <p>Total de Productos: <span id="totalProductos">0</span></p>
+                <button class="btnCompra">Comprar</button>
             </div>
+        </section> 
 
-        <!-- Formulario de Método de Pago -->
-            <div class="metodo-pago">
-                <h2>Método de Pago</h2>
-                <form action="procesar_pago.php" method="POST">
-                    <label for="nombre">Nombre de quien recibe:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+       <div class=" form-metodo-pago">  
+        <form action="" class="form-pago" method="POST">
+            <h2>Registro de compra</h2>
+            <p>Antes de darle clic en la opción de comprar registre los siguientes datos:</p>
+            <br>
+            <div class="form-group">
+                <label for="nombre">Nombre de quien recibe:</label>
+                <input type="text" id="nombre" name="nombre" required>
 
-                    <label for="cedula">Número de Cédula:</label>
-                    <input type="text" id="cedula" name="cedula" required>
+                <label for="cedula">Número de Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required>
 
-                    <label for="direccion">Dirección de Entrega:</label>
-                    <input type="text" id="direccion" name="direccion" required>
+                <label for="direccion">Dirección de Entrega:</label>
+                <input type="text" id="direccion" name="direccion" required>
 
-                    <label for="celular">Número de Celular:</label>
-                    <input type="tel" id="celular" name="celular" required>
+                <label for="celular">Número de Celular:</label>
+                <input type="tel" id="celular" name="celular" required>
 
-                    <label for="metodo_pago">Método de Pago:</label>
-                    <select id="metodo_pago" name="metodo_pago" required>
-                        <option value="">Selecciona una opción</option>
-                        <option value="pse">PSE</option>
-                        <option value="bancolombia">Bancolombia</option>
-                        <option value="nequi">Nequi</option>
-                        <option value="visa">Visa</option>
-                        <option value="daviplata">Daviplata</option>
-                    </select>
-                    <button type="submit">Guardar</button>
-                </form>
+                <label for="metodo_pago">Método de Pago:</label>
+                <select  class="metodo_pago" name="metodo_pago" required>
+                    <option value="">Selecciona</option>
+                    <option value="pse">PSE</option>
+                    <option value="bancolombia">Bancolombia</option>
+                    <option value="nequi">Nequi</option>
+                    <option value="visa">Visa</option>
+                    <option value="daviplata">Daviplata</option>
+                </select>
+                <div class="carrito_terminos">
+                    <input type="checkbox" id="aceptarTerminos" name="aceptarTerminos" required>
+                    <label for="aceptarTerminos">He leído y acepto las <a href="#">Políticas de privacidad</a> y los <a href="#">Términos y condiciones</a></label>
+                </div>
             </div>
+            <div class="registroGuardar">
+                <button type="submit">Guardar</button>
+            </div>    
+                    
+        </form>
         </div>
     </main>
+    <footer class="pie">
+        <div class="informacion">
+        <ul class="pie-info">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/sobreNosotros.html">Sobre Nosotros</a></li>
+            <li><a href="../pages/contactenos.html">Contactenos</a></li>
+            <li><a href="#">Terminos y condiciones </a></li>  
+            <li><a href="#">Politicas y privacidad</a></li> 
+        </ul>  
+        <div class="info">
+        <div class="info-contacto">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>Calle 134 53 - 23 Bogotá Colombia</p>
+        </div>
+        <div class="info-contacto">
+        <i class="fas fa-envelope"></i>
+        <p>info@sportsls.com</p>
+        </div>
+        <div class="info-contacto">
+        <i class="fas fa-phone"></i>
+        <p>+57 316 234 23 12</p>
+        </div>
+
+        </div>
+        <div class="redesSociales">
+            <a href="https://www.whatsapp.com/?lang=es_LA" class="fa-brands fa-whatsapp"></a>
+            <a href="https://www.facebook.com/?stype=lo&deoia=1&jlou=AfcMNvE7B_aFfwZk2EgLQjFFf87l_VcqxvJbwTjvY9pALcvloq_AkpROvQdwJ6n0z_uepvqeqIIxMxEjVlN-ykkTjxL3z7MknYjdm2EI2dc34w&smuh=14183&lh=Ac86DsX8t4mwqodpkNw" class="fa-brands fa-facebook"></a>
+            <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2F&hl=es-es&aa_click=8891933284028179" class="fa-brands fa-instagram"></a>
+            <a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des" class="fa-brands fa-tiktok"></i></a>
+        </div>
+        </div>
+        <div class="derechos">
+        <P>@2024 sportsls | Todos los derechos reservados</P>
+        </div>
+    </footer>
     
+    <script src="../js/app.js"></script>
 </body>
 </html>

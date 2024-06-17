@@ -28,7 +28,7 @@
                 <li><a href="./sobreNosotros.html">Sobre Nosotros</a></li>
                 <li><a href="./contactenos.html">Contactenos</a></li>
                 <li><a href="./carrito.html"class="fa-solid fa-cart-shopping"></a></li>
-                <li><a href="#Contáctanos"class="fa-solid fa-phone"></a></li>
+                <li><a href="./contactenos.html" class="fa-solid fa-phone"></a></li>
                 <button class="boton1"onclick="window.location.href='./registrarme.html'">Registrarme</button>           
             </nav>                  
             </div>
@@ -36,15 +36,17 @@
                 
     </header>
     
-    <main>
-        <div>
+    <main class="mainContactenos">
+        <div class="titulo-contactenos">
             <h1>Contacténos</h1>
         </div>
-        <p>Contáctenos sobre cualquier cosa relacionada con nuestra empresa o servicio. Haremos todo lo posibles por responder a la brevedad.</p>
-        <div class="container_button">
+        <p class="infoContactenos">Contáctenos sobre cualquier cosa relacionada con nuestra empresa o servicio. <br> Haremos todo lo posibles por responder a la brevedad.</p>
+        <section class="contactenos-consular">
+            <div class="preguntasFrecuentes">
             <h2>Preguntas frecuentes</h2>
             <hr>
             <button type="button" class="button_pre">¿Comó solicitar un reembolos?</button>
+            <div class="contenido">
             <p>Para solicitar un reembolso, sigue estos pasos:</p>
             <ol>
                 <li>Inicia sesión en tu cuenta en nuestro sitio web.</li>
@@ -54,11 +56,15 @@
                 <li>Adjunte el pago relacionado con la compra a reembolsar.</li>
                 <li>De clic en " Enviar ".</li>
             </ol>
+            </div>
     
             <button type="button" class="button_pre">Una vez hecha la compra. ¿Puedo cancelar mi pedido?</button>
+            <div class="contenido">
             <p>No, una vez que la compra ha sido realizada, no es posible cancelar el pedido. Si ya no deseas el producto, deberás esperar a recibirlo y luego proceder con una solicitud de devolución y reembolso según nuestras políticas de devoluciones. Consulta nuestra política de devoluciones para más detalles sobre cómo proceder en estos casos.</p>
-    
+            </div>       
+                
             <button type="button" class="button_pre">¿Comó me registro?</button>
+            <div class="contenido">   
             <p>Registrarse en nuestra tienda deportiva es muy sencillo:</p>    
             <ol>
                 <li>Haz clic en el botón "Registrarse" en la esquina superior derecha de la página de inicio.</li>
@@ -66,8 +72,9 @@
                 <li>Haz clic en "Registrarme".</li>
                 <li>Recibirás un correo electrónico de confirmación. Haz clic en el enlace proporcionado en el correo para activar tu cuenta.</li>
             </ol>
-
+            </div>
             <button type="button" class="button_pre">Comó puedo solicitar una peticion?</button>
+            <div class="contenido">
             <p>Para realizar una petición, sigue estos pasos:</p>
             <ol>
                 <li>Inicia sesión en tu cuenta en nuestro sitio web.</li>
@@ -76,6 +83,9 @@
                 <li>En categoria selecciona "petición", describa el asunto y descripcion.</li>
                 <li>De clic en " Enviar"</li>
             </ol>
+            </div>
+            </div>
+            <div class="datos-contactenos">
             <div class="direccion">
                 <i class="fas fa-map-marker-alt"></i>
                 <a>Calle 134 53 - 23 Bogotá Colombia</a>
@@ -88,47 +98,93 @@
                 <i class="fas fa-phone"></i>
                 <a href="tel:+1234567890">+57 316 234 23 12</a>
             </div>
-        </div>
             <div>
                 <button class="button_solicitud">Crear Solicitud</button>
             </div>
-            <h2>Formulario de Solicitud</h2>
-            <form id="form" class="form">
-                <label for="nombre">Nombres Completos:</label>
-                <input type="text" id="nombre" >
-
-                <label for="telefono">Número de Celular:</label>
-                <input type="number" id="celphone" >
-
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" >
-
-                <label for="direccion">Dirección:</label>
-                <input type="text" id="direccion" >
-
-                <label for="categoria">Categoría:</label>
-                <select id="categoria" >
-                    <option value="">Selecciona una opción</option>
-                    <option value="solicitud_de_rembolso">Solicitud de reembolso</option>
-                    <option value="peticiones">Peticiones</option>
-                    <option value="queja">Queja</option>
-                    <option value="subgerencia">Subgerencia</option>
-                    <option value="reclamo">Reclamo</option>
-                </select>
-                <label for="asunto">Asunto:</label>
-                <input type="text" id="asunto" >
-                <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-                <label for="adjunto">Adjuntar archivo:</label>
-                    <input type="file" id="adjunto" name="adjunto">
-                <label>
-                <input type="checkbox" id="politicas" name="politicas" required>
-                Acepto las <a href="politicas_privacidad.html" target="_blank">Políticas y Privacidad</a>
-                </label> 
-                <button type="submit">Enviar</button>
-            </form>    
-                <img src="/img/contacimg1.jpg" alt="imagen">
+            </div>
+        </section>
+        <section class="contactenos-fomulario">
+            <div class="formulContactenos">
+                <h2>Formulario de solicitud</h2>
+                <br>
+                <form id="form" class="form-contactenos">
+                    <div class="formulario-grupo">
+                        <label for="nombre">Nombre completo*</label>
+                        <input type="text" id="nombre" required>
+        
+                        <label for="telefono">Número de teléfono*</label>
+                        <input type="number" id="celphone" required>
+        
+                        <label for="email">Correo electrónico*</label>
+                        <input type="email" id="email" required>
+        
+                        <label for="direccion">Dirección (Opcional)</label>
+                        <input type="text" id="direccion">
+        
+                        <label for="categoria">Categoría*</label>
+                        <select class="categoria" required>
+                            <option value="">Seleccione</option>
+                            <option value="solicitud_de_rembolso">Solicitud de reembolso</option>
+                            <option value="peticiones">Peticiones</option>
+                            <option value="queja">Queja</option>
+                            <option value="subgerencia">Subgerencia</option>
+                            <option value="reclamo">Reclamo</option>
+                        </select>
+        
+                        <label for="asunto">Asunto*</label>
+                        <input type="text" id="asunto" required>
+        
+                        <label for="descripcion">Descripción*</label>
+                        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
+        
+                        <label for="adjunto">Adjuntar Archivos</label>
+                        <input type="file" id="adjunto" name="adjunto">
+        
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="imagenContactenos">
+                <img src="../img/contacimg1.jpg" alt="imagen">
+            </div>
+        </section>   
     </main>
+    <footer class="pie">
+        <div class="informacion">
+        <ul class="pie-info">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/sobreNosotros.html">Sobre Nosotros</a></li>
+            <li><a href="../pages/contactenos.html">Contactenos</a></li>
+            <li><a href="#">Terminos y condiciones </a></li>  
+            <li><a href="#">Politicas y privacidad</a></li> 
+        </ul>  
+        <div class="info">
+        <div class="info-contacto">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>Calle 134 53 - 23 Bogotá Colombia</p>
+        </div>
+        <div class="info-contacto">
+        <i class="fas fa-envelope"></i>
+        <p>info@sportsls.com</p>
+        </div>
+        <div class="info-contacto">
+        <i class="fas fa-phone"></i>
+        <p>+57 316 234 23 12</p>
+        </div>
+
+        </div>
+        <div class="redesSociales">
+            <a href="https://www.whatsapp.com/?lang=es_LA" class="fa-brands fa-whatsapp"></a>
+            <a href="https://www.facebook.com/?stype=lo&deoia=1&jlou=AfcMNvE7B_aFfwZk2EgLQjFFf87l_VcqxvJbwTjvY9pALcvloq_AkpROvQdwJ6n0z_uepvqeqIIxMxEjVlN-ykkTjxL3z7MknYjdm2EI2dc34w&smuh=14183&lh=Ac86DsX8t4mwqodpkNw" class="fa-brands fa-facebook"></a>
+            <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2F&hl=es-es&aa_click=8891933284028179" class="fa-brands fa-instagram"></a>
+            <a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des" class="fa-brands fa-tiktok"></i></a>
+        </div>
+        </div>
+        <div class="derechos">
+        <P>@2024 sportsls | Todos los derechos reservados</P>
+        </div>
+    </footer>
+    <script src="../js/app.js"></script>
     
 </body>
 </html>
