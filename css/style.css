@@ -16,6 +16,7 @@ body{
   position: relative;
   top: 0;
   font-size: 16px;
+
 }
 /*PAGINA PRINCIPAL*/
 .header {
@@ -25,6 +26,7 @@ body{
   left: 0;
   width: 100%;
 
+
 }
 .header .container {
   width: 100%;
@@ -32,6 +34,7 @@ body{
   display: flex;
   flex-direction: row;
   align-items: center;
+
 }
 header .logo{
   text-align: center;
@@ -46,7 +49,10 @@ header .logo{
   text-align: center;
   padding: 0.8%;
   flex-grow: 8;
-
+}
+.menu1{
+  justify-content: space-between;
+  width: 100%;
 }
 .menu1>li{
   display: inline-block;
@@ -74,24 +80,89 @@ header .logo{
     border-radius: 25px;
     background-color: #075C6B;
 }
-  
 
+
+.silebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 40%;
+  z-index: 999;
+  background-color:rgba(255, 255,255, 40%);
+  backdrop-filter: blur (10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+.silebar >li{
+  padding: 0% 02%;
+  list-style: none;
+  font-size: 25px; 
+  margin-top: 20px;
+ 
+
+}
+.hideSilebar{
+  align-items: flex-start;
+  align-items: flex-start;
+}
+
+.silebar>li a{
+  width: 100%;
+  color: black;
+  text-decoration: none;
+}
+.silebar .boton2{
+  padding: 20px 30px;
+  font-size: 25px;
+  border: none;
+  color:white;
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: #075C6B;
+  margin-top: 20px;
+
+}
+.menu1 .open{
+  display: none;
+  
+}
 .promocion{
   background-color:#8C52FF ;
   color: white;
-  display: flex;  
+  display: flex; 
+  flex-wrap: wrap; 
+
+}
+.imagen-principal{
+  flex: 1;
+   display: flex;
+   justify-content:center;
+  align-items: center;
+  width: auto;
+  height: auto;
+
 }
 
-.imagenp1{
-  width: 600px;
-  height: 700px;
+.imagen-principal img{
+  width: 100%;
+  height: auto;
   flex: 1;
   display: block;
+  max-width: 600px; /* Tamaño máximo de la imagen */
+  max-height: 700px; /* Altura máxima de la imagen */
+  
 }
 .coleccion{
   flex: 1;
   text-align: right;
   padding: 6% 7% ;
+  flex-grow: 1;
 }
 .coleccion>h1{
   font-size: 60px;
@@ -119,6 +190,31 @@ header .logo{
   height: 100%;
   object-fit: cover;
 }
+.imagen-principal{
+  justify-content: center;
+  align-items: center;
+  
+ 
+}
+.seccion-descubre h2{
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  margin: 10px;
+
+}
+.seccion-descubre hr{
+  border-top: 5px solid #b6b0aa;
+  border-radius: 5px ;
+  width: 50%;
+  margin: auto;
+ padding-bottom: 10px ;
+
+}
+
 
 .referencias img:nth-child(1) {
   grid-column: 1 / 2; 
@@ -149,77 +245,121 @@ header .logo{
   grid-column: 3 / 4; 
   grid-row: 2 / 3;
 }
+.seccion-tendecias h2{
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  margin: 10px;
+}
+.seccion-tendecias hr{
+  border-top: 5px solid #b6b0aa;
+  border-radius: 5px ;
+  width: 50%;
+  margin: auto;
+ padding-bottom: 10px ;
 
 
-.paratodos{
+  
+}
+.paratodos {
   display: flex;
   width: 100%;
   color: white;
-  height: auto;
   justify-content: space-between;
   font-size: 18px;
+  margin: 0;
+  background-color: #341150;
+}
 
+.paratodos button {
+  padding: 18px 40px;
+  font-size: 16px;
+  border: none;
+  color: #0f110f;
+  cursor: pointer;
+  border-radius: 25px;
+  background-color: white;
+  margin-top: 20px;
 }
-.paratodos button{
-    padding: 18px 40px;
-    font-size: 16px;
-    border: none;
-    color:#0f110f;
-    cursor: pointer;
-    border-radius: 25px;
-    background-color:white;
-    margin-top: 20px;
-}
-.paratodos h2{
+
+.paratodos h2 {
   font-size: 30px;
   margin-top: 20px;
-  padding: 2% ;
+  padding: 2%;
 }
-.paratodos p{
+
+.paratodos p {
   padding: 2%;
   font-size: 18px;
   text-align: center;
   margin-top: 20px;
 }
-.paraella{
-  background-color:#075C6B ;
+
+.paraella, .parael, .accesorios {
   text-align: center;
-  padding: 5% 5%;
-  flex: 1;  
+  flex: 1;
+  padding: 5%;
+  box-sizing: border-box; /* Asegura que el padding se incluya en el ancho total */
+  min-height: 300px; /* Asegura una altura mínima uniforme */
 }
-.icon-estrella{
+
+.paraella {
+  background-color: #075C6B;
+}
+
+.parael {
+  background-color: #8C52FF;
+}
+
+.accesorios {
+  background-color: #341150;
+}
+
+.icon-estrella {
   font-size: 30px;
   margin-top: 5px;
 }
 
-.parael{
-  background-color: #8C52FF;
+.seccion-marcas h2{
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
   text-align: center;
-  flex: 1;
-  padding: 5% 5%;
+  color: black;
+  margin: 10px;
 
 }
-.accesorios{
-  background-color: #341150;
-  text-align: center;
-  padding: 5% 5%;
-  flex: 1;
+.seccion-marcas hr{
+  border-top: 5px solid #b6b0aa;
+  border-radius: 5px ;
+  width: 50%;
+  margin: auto;
+ padding-bottom: 10px ;
+
 }
-.marcas{
+
+.marcas {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin-top: 30px;
   margin-left: 55px;
   margin-right: 5px;
   margin-bottom: 30px;
-
+  gap: 20px; /* Espacio entre los elementos */
 }
-.marcas img{
+
+.marcas img {
   flex-grow: 1;
   height: 85px;
-  width: 20px;
-  margin-right: 60px;
-
+  max-width: 150px; /* Ancho máximo de las imágenes */
+  object-fit: contain;
 }
+
 .pie{
   background-color: #075C6B;
   text-align: left;
@@ -343,11 +483,11 @@ header .logo{
   gap: 50px;
   text-align: center;
 
+
 }
 .maintienda img{
   width: 300px;
   height: 400px;
-
 }
 .productosTienda button{
   padding: 15px 35px;
@@ -447,11 +587,9 @@ header .logo{
 
 
 .carrito_terminos {
-
     align-items: center;
     margin-top: 10px;
 }
-
 .carrito_terminos input[type="checkbox"] {
     margin-right: 10px;
     cursor: pointer;
@@ -461,16 +599,12 @@ header .logo{
     align-items: center;
     font-size: 20px;
 }
-
 .carrito_terminos a {
-    text-decoration: none;
-   
+    text-decoration: none;  
 }
-
 .carrito_terminos a:hover {
     text-decoration: underline;
 }
-
 
 .registroGuardar{
   text-align: center;
@@ -487,6 +621,24 @@ header .logo{
  
 }
 /*SECCION CONTACTENOS*/
+.seccion-contactenos h2{
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  margin: 10px;
+
+}
+.seccion-contactenos hr{
+  border-top: 5px solid #b6b0aa;
+  border-radius: 5px ;
+  width: 50%;
+  margin: auto;
+ padding-bottom: 10px ;
+
+}
 .titulo-contactenos{
   background-color:#8C52FF ;
   color: white;
@@ -509,7 +661,7 @@ header .logo{
 
 }
 .preguntasFrecuentes{
-  flex: 1;
+  flex: 70%;
   font-size: 18px ;
   text-align: center;
 }
@@ -529,66 +681,113 @@ header .logo{
   color: #0f110f;
 }
 
+
 .contenido {
-  display: none; 
-  margin-top: 10px;
+ text-align: left;
+ display: none;
+ font-size: 19px;
 }
-.hidden {
-  display: none; 
+.parrafo-info{
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 10%;
+
+  
+}
+.contenido2 {
+ text-align: left;
+ display: none;
+ font-size: 19px;
+}
+
+
+
+.contenido-info {
+  padding: 20px  ;
+  text-align: left;
+  margin-bottom: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .datos-contactenos{
-  flex: 1;
+  flex: 30%;
   align-content: center;
   font-size: 20px ;
+ 
 }
-.datos-contactenos .button_solicitud{
-  width: 40%;
-  padding: 20px ;
+.btnsolicitud{
+  font-size: 20px ;
+}
+.btnsolicitud button{
   text-align: center;
   background-color: #075C6B;
   color: white;
-  font-size: 20px ;
   border: none;
   border-radius: 25px ;
   margin-top: 10px ;
+  padding: 20px 30px ;
+  font-size: 25px;
+ 
 }
 .contactenos-fomulario {
-  display: flex;
+  display:none;
   width: 100%;
-  outline: none;
   background-color: #fff;
+
+}
+.form-contc{
+  display: flex;
+  font-size: 18px;
   padding: 20px;
-  place-items: center;
-  
+  justify-content: center;
+  margin-left: 50px ;
 }
 .formulContactenos {
-  flex: 1;
-  padding: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+
+}
+.formulario-grupo{
+    display: flex;
+    flex-direction:column;
+    text-align: left;
 }
 .formulContactenos h2{
   font-size: 30px ;
 }
 
 .form-contactenos {
-  display: flex;
-  flex-direction: column;
-}
+    padding: 45px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    width: 87%;
 
+}
 .form-contactenos label {
   margin-bottom: 5px;
-  font-weight: bold;
+  
 }
-
 .form-contactenos input,
 .form-contactenos select,
 .form-contactenos textarea {
   margin-bottom: 10px;
   padding: 10px;
-  border: 1px solid #0f110f;
-  border-radius: 5px;
-  width: 100%;
+  border: 1px solid #b6b0aa;
+  border-radius: 10px;
   box-sizing: border-box;
+}
+.contactenos_terminos input[type="checkbox"] {
+    cursor: pointer;   
+}
+.contactenos_terminos label {
+    align-items: center;
+    font-size: 20px;
+}
+.contactenos_terminos a:hover {
+    text-decoration: underline;
 }
 
 .form-contactenos button {
@@ -596,37 +795,65 @@ header .logo{
   background-color: #4b0082; 
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
   font-size: 20px;
+  margin-top: 15px;
 }
-
 .form-contactenos button:hover {
-  background-color: #3a006b; 
+  background-color: #a862e2; 
 }
-
 .imagenContactenos {
   flex: 1;
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
-}
+  padding: 10px 10px;
+  display: grid;
+  place-items: center;
 
+}
 .imagenContactenos img {
   max-width: 100%;
   border: 1px solid #ccc;
   border-radius: 10px;
- 
 }
 /*SECCION SOBRE NOSOTROS*/
-.container_nosotros{
-  background-color:#341150 ;
-  display: flex;
-  width: 100%;
-  place-items: center;
+.seccion-sobreNosotros h2{
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  margin: 10px;
 
 }
-.infonosotros{
+.seccion-sobreNosotros hr{
+  border-top: 5px solid #b6b0aa;
+  border-radius: 5px ;
+  width: 50%;
+  margin: auto;
+ padding-bottom: 10px ;
+
+}
+.container_nosotros {
+  background-color: #341150;
+  display: flex;
+/* Permite que los elementos se envuelvan en líneas nuevas si es necesario */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  padding: 20px;
+  /* Espacio entre elementos */
+}
+.infonosotros button {
+padding: 15px 25px;
+background-color:#075C6B ;
+border: none;
+color: white;
+border-radius: 25px;
+cursor: pointer;
+margin-top: 10px;
+}
+
+.infonosotros {
   flex: 1;
   font-size: 20px;
   color: white;
@@ -634,27 +861,27 @@ header .logo{
   margin-left: 40px;
   margin-right: 40px ;
 }
-.infonosotros h1{
-  font-size: 30px;
-}
-.infonosotros button{
-padding: 10px 20px;
-margin: 10px;
-background-color:#075C6B ;
-border: none;
-color: white;
-border-radius: 10px;
-cursor: pointer; 
+.accesorios {
+    align-items: center;
+    margin-top: 10px;
 }
 
-.imagenNosotros{
+.imagenNosotros {
   flex: 1;
-  place-items: center;
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+  max-width: 100%; /* Asegura que el contenedor no exceda el ancho disponible */
+  min-width: 280px; /* Ancho mínimo para el bloque de imagen */
 }
-.imagenNosotros img{
-  width: 500px;
-  height: 450px;
-  padding: 10px; 
+
+.imagenNosotros img {
+  width: 100%;
+  height: auto; /* Mantiene la proporción de la imagen */
+  max-width: 500px; /* Tamaño máximo de la imagen */
+  max-height: 500px; /* Altura máxima de la imagen */
+  display: block;
+  border-radius: 15px; /* Opcional: bordes redondeados para la imagen */
 }
 /*SECCION REGISTRO*/
 .form *{
@@ -726,6 +953,185 @@ cursor: pointer;
   background-color: #8C52FF;
   color: #341150;
 }
+@media (max-width:1105px){
+  .menu1 >li{
+    display: none;
+  }
+ .boton1{
+    display: none;
+  }
+  .menu1 .open {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 10px; /* Ajusta este margen según sea necesario */
+}
+
+}
+@media(max-width:400px){
+.silebar{
+  width: 100%;
+}
+}
+@media (max-width: 865px) {
+  .promocion {
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
+
+  .coleccion {
+    text-align: center; /* Alinea el texto al centro en pantallas pequeñas */
+    padding: 5%;
+  }
+
+  .coleccion > h1 {
+    font-size: 40px;
+  }
+
+  .descubrelo {
+    padding: 15px 50px;
+    font-size: 18px;
+  }
+
+  .imagen-principal img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto;
+    border-radius: 35px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coleccion > h1 {
+    font-size: 30px;
+  }
+
+}
+@media(max-width:914px){
+    .paratodos{
+    flex-direction: column;
+
+  }
+  .parael{
+    flex-direction: column;
+  }
+  .accesorios{
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .container_nosotros {
+    flex-direction: column; /* Cambia la dirección a columna para pantallas pequeñas */
+    align-items: center;
+    text-align: center;
+  }
+
+  .infonosotros {
+    text-align: center; /* Centra el texto */
+    margin: 20px 0; /* Margen vertical */
+  }
+
+  .infonosotros h1 {
+    font-size: 24px; /* Reduce el tamaño del título */
+  }
+
+  .infonosotros p {
+    font-size: 18px; /* Reduce el tamaño del texto */
+  }
+
+  .imagenNosotros img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .infonosotros h1 {
+    font-size: 20px; /* Reduce aún más el tamaño del título */
+  }
+
+  .infonosotros p {
+    font-size: 16px; /* Reduce aún más el tamaño del texto */
+  }
+
+  .infonosotros button {
+    padding: 10px 20px; /* Ajusta el padding del botón */
+    font-size: 16px; /* Ajusta el tamaño del texto del botón */
+  }
+
+  .imagenNosotros img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto;
+  }
+}
+@media(max-width:750px){
+ .contactenos-consular{
+  flex-direction: column;
+ }
+ .datos-contactenos{
+  margin-top: 30px;
+}
+.btnsolicitud{
+  margin-top: 20px;
+
+}
+.redesSociales{
+  flex-direction: column;
+}
+}
+@media (max-width: 946px) {
+  .marcas {
+    justify-content: center;
+ 
+  }
+  
+  .marcas img {
+    flex: 0 0 45%; /* Dos imágenes por fila */
+    margin: 10px; /* Espacio alrededor de cada imagen */
+  }
+
+  .marcas img:nth-child(5) {
+    flex: 0 0 100%; /* La quinta imagen ocupa toda la fila */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto; /* Centra la imagen */
+  }
+
+}
+@media (max-width: 946px) {
+  .informacion {
+    flex-direction: column;
+    align-items: center;
+    
+    font-size: 20px;
+  }
+
+  .pie-info, .info, .redesSociales {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .pie-info {
+    margin-bottom: 20px;
+  }
+
+  .info-contacto {
+    justify-content: center;
+  }
+}
+@media (max-width:1214px){
+
+  .form-contc{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+
 
 
 
