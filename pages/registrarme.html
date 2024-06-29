@@ -18,24 +18,38 @@
 </head>
 <body>
     <header class="header">
+
         <div class="container">
          <div class="logo">
             <img src="../img/logosportsls.jpeg" alt="logo sportsls" />
          </div>
             <div class="menu">
             <nav>
+                <ul class="silebar" id="silebar">
+                    <li class="hideSilebar"><a href="#" onclick=hideSilebar()><i class="fas fa-times"></i></a></li>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="./tienda.html">Tienda</a></li>
+                    <li><a href="../index.html">Sobre Nosotros</a></li>
+                    <li><a href="../index.html">Contáctenos</a></li>
+                    <li><a href="./carrito.html"class="fa-solid fa-cart-shopping"></a></li>
+                    <li><a href="../index.html"class="fa-solid fa-phone"></a></li>
+                    <button class="boton2"onclick="window.location.href='./registrarme.html'">Registrarme</button>
+                   
+                 </ul>
               <ul class="menu1">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./tienda.html">Tienda</a></li>
-                <li><a href="./sobreNosotros.html">Sobre Nosotros</a></li>
-                <li><a href="./contactenos.html">Contáctenos</a></li>
-                <li><a href="./carrito.html"class="fa-solid fa-cart-shopping"></a></li>
-                <li><a href="./contactenos.html"class="fa-solid fa-phone"></a></li>
-                <button class="boton1"onclick="window.location.href='./registrarme.html'">Registrarme</button>           
+                <li ><a href="./tienda.html">Tienda</a></li>
+                <li ><a href="../index.html">Sobre Nosotros</a></li>
+                <li ><a href="../index.html">Contáctenos</a></li>
+                <li ><a href="./carrito.html"class="fa-solid fa-cart-shopping"></a></li>
+                <li ><a href="../index.html"class="fa-solid fa-phone"></a></li>
+                <button class="boton1"onclick="window.location.href='./registrarme.html'">Registrarme</button> 
+                <li class="open"><a href="#" onclick=showSilebar()><i class="fa-solid fa-bars"></i></a></li>
+             </ul>  
+                      
             </nav>                  
             </div>
-        </div>
-                
+        </div>     
     </header>
     <main>
         <form id="form" class="form">
@@ -64,6 +78,41 @@
             </div>
         </form>
     </main>
+    <footer class="pie">
+        <div class="informacion">
+        <ul class="pie-info">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../pages/sobreNosotros.html">Sobre Nosotros</a></li>
+            <li><a href="../pages/contactenos.html">Contáctenos</a></li>
+            <li><a href="#">Términos y condiciones </a></li>  
+            <li><a href="#">Politicas y privacidad</a></li> 
+        </ul>  
+        <div class="info">
+        <div class="info-contacto">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>Calle 134 53 - 23 Bogotá Colombia</p>
+        </div>
+        <div class="info-contacto">
+        <i class="fas fa-envelope"></i>
+        <p>info@sportsls.com</p>
+        </div>
+        <div class="info-contacto">
+        <i class="fas fa-phone"></i>
+        <p>+57 316 234 23 12</p>
+        </div>
+
+        </div>
+        <div class="redesSociales">
+            <a href="https://www.whatsapp.com/?lang=es_LA" class="fa-brands fa-whatsapp"></a>
+            <a href="https://www.facebook.com/?stype=lo&deoia=1&jlou=AfcMNvE7B_aFfwZk2EgLQjFFf87l_VcqxvJbwTjvY9pALcvloq_AkpROvQdwJ6n0z_uepvqeqIIxMxEjVlN-ykkTjxL3z7MknYjdm2EI2dc34w&smuh=14183&lh=Ac86DsX8t4mwqodpkNw" class="fa-brands fa-facebook"></a>
+            <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2F&hl=es-es&aa_click=8891933284028179" class="fa-brands fa-instagram"></a>
+            <a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des" class="fa-brands fa-tiktok"></i></a>
+        </div>
+        </div>
+        <div class="derechos">
+        <P>@2024 sportsls | Todos los derechos reservados</P>
+        </div>
+    </footer>
     
 </body>
 </html>

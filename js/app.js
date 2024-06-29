@@ -1,4 +1,65 @@
-'use script';
+
+// carrito de compras 
+document.addEventListener('DOMContentLoaded', () => {
+    const botonesAgregar = document.querySelectorAll('.botonAgregar');
+    const productosCarrito = document.getElementById('productosCarrito');
+    const totalCompra = document.getElementById('totalCompra');
+    const totalProductos = document.getElementById('totalProductos');
+    const vaciarCarritoBtn = document.getElementById('vaciarCarrito');
+
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    const actualizarCarrito = () => {
+        productosCarrito.innerHTML = '';
+        let total = 0;
+        let totalProd = 0;
+
+        carrito.forEach(producto => {
+            const productoDiv = document.createElement('div');
+            productoDiv.classList.add('producto-en-carrito');
+            productoDiv.innerHTML = `
+                <img src="${producto.imagen}" alt="">
+                <p>${producto.descripcion}</p>
+                <p>${producto.precio}</p>
+            `;
+            productosCarrito.appendChild(productoDiv);
+            total += parseInt(producto.precio.replace('$', '').replace('.', ''));
+            totalProd += 1;
+        });
+
+        totalCompra.textContent = total.toLocaleString();
+        totalProductos.textContent = totalProd;
+    };
+
+    const guardarCarrito = () => {
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    };
+
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener('click', (e) => {
+            const producto = e.target.closest('.producto');
+            const descripcion = producto.querySelector('p').textContent;
+            const precio = producto.querySelector('.precio').textContent;
+            const imagen = producto.querySelector('img').src;
+
+            carrito.push({ descripcion, precio, imagen });
+            guardarCarrito();
+            actualizarCarrito();
+
+            alert('Se agregó al carrito');
+        });
+    });
+
+    vaciarCarritoBtn.addEventListener('click', () => {
+        carrito = [];
+        guardarCarrito();
+        actualizarCarrito();
+    });
+
+    actualizarCarrito();
+});
+
+
 //boton barra lateral tres rayas
 function showSilebar(){
     const sidebar = document.querySelector('#silebar')
@@ -57,6 +118,5 @@ function mostrarFomulario1() {
         formSection.style.display = 'none';
     }
 }
-
 
 
