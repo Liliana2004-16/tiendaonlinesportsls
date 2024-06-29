@@ -100,7 +100,7 @@ document.querySelectorAll('.coleccion-opciones a').forEach(function(link) {
     });
 });
 
-//botones contactenenos 
+//botones contactenenos preguntas frecuentes
 function mostrarcontenido(id) {
     let elemento = document.getElementById(id);
     if (elemento.style.display === "none" || elemento.style.display === "") {
@@ -118,5 +118,22 @@ function mostrarFomulario1() {
         formSection.style.display = 'none';
     }
 }
+//boton registrarme
+function btnregistrame(){
+    alert('Tes has registrado exitosamente')
+}
+//boton compra
+function btnCompra(){
+    alert('Registro de compra exitoso')
+}
+//boton solicitud contactenos
+function btnEnviar(){
+    alert('Solicitud exitosa')
+}
+
+        
+    
+
+
 
 
