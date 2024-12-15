@@ -1,5 +1,3 @@
-
-// carrito de compras 
 document.addEventListener('DOMContentLoaded', () => {
     const botonesAgregar = document.querySelectorAll('.botonAgregar');
     const productosCarrito = document.getElementById('productosCarrito');
